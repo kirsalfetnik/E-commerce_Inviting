@@ -2,8 +2,7 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { FC, PropsWithChildren } from 'react'
 
-import { onlyText } from '@/utils/clear-text'
-
+//import { onlyText } from '@/utils/clear-text'
 import { siteName, titleMerge } from './meta.config'
 import { ISeo } from './meta.interface'
 
@@ -37,7 +36,7 @@ const Meta: FC<PropsWithChildren<ISeo>> = ({
 						<meta property='og:site_name' content={siteName} />
 						<meta
 							property='og:description'
-							content={onlyText(description, 197)}
+							//content={onlyText(description, 197)}
 						/>
 					</>
 				) : (

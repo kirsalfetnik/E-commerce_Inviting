@@ -1,0 +1,25 @@
+.search {
+	@apply relative w-2/6;
+
+	> div {
+		@apply relative;
+		> input {
+			width: 450px;
+			padding: 8px 10px;
+			outline: none;
+			background-color: rgb(230 242 239);
+			border: none;
+			border-bottom: 2px solid rgb(25, 27, 34);
+			&::placeholder {
+				@apply uppercase tracking-widest;
+			}
+		}
+	}
+
+	&::before {
+		content: '';
+		@apply absolute -top-[280%] -left-[10%] rounded-full bg-light-green;
+		width: 120%;
+		padding-top: 120%;
+	}
+}

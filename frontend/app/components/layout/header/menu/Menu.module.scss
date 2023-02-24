@@ -1,0 +1,37 @@
+.menu {
+	@apply flex items-center gap-10;
+
+	> a {
+		width: 100px;
+		height: 100px;
+		position: relative;
+		overflow: hidden;
+		border-radius: 50%;
+		> img {
+			display: inline;
+			margin: 0 auto;
+			height: 100%;
+			width: auto;
+		}
+	}
+
+	> nav {
+		> ul {
+			@apply flex items-center gap-6;
+			> li {
+				> a {
+					@apply relative font-semibold uppercase tracking-widest;
+
+					&::after {
+						content: '';
+						@apply absolute left-0 -bottom-3 h-0.5 w-0 bg-black transition-all duration-300;
+					}
+
+					&:hover::after {
+						@apply w-full;
+					}
+				}
+			}
+		}
+	}
+}
